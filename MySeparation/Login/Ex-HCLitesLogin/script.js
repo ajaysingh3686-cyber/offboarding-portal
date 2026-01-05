@@ -1,3 +1,21 @@
+function validateCredentials() {
+    const uid = document.getElementById("uid").value.trim();
+    const pwd = document.getElementById("pwd").value.trim();
+
+    if (uid === "" || pwd === "") {
+        showPopup("Please enter Login ID and Password");
+        return;
+    }
+
+    if (uid === "52222978" && pwd === "M@h@dev_1991") {
+        document.getElementById("otpRow").style.display = "table-row";
+        showPopup("OTP sent to your registered mobile number");
+    } else {
+        showPopup("Invalid Login ID or Password");
+    }
+}
+
+
 function showLoader(text) {
     document.getElementById("loaderText").innerText = text;
     document.getElementById("loader").style.display = "flex";
@@ -34,6 +52,7 @@ function verifyOtp() {
         alert("Invalid OTP. Please enter the correct OTP.");
     }
 }
+
 
 
 
