@@ -27,10 +27,11 @@ function verifyOtp() {
         showLoader("Verifying OTP...");
 
         setTimeout(() => {
-            window.location.href = "dashboard.html";
+            window.location.href = "index.html";
         }, 1300); // ⏳ realistic delay
 
     } else {
         alert("Invalid OTP. Please enter the correct OTP.");
     }
 }
+
