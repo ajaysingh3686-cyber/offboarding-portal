@@ -1,25 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Offboarding Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg">
 
-<div class="top-bar">
-    <span class="logo">HCLTech</span>
-    <span class="title">Offboarding Portal</span>
-</div>
+<body class="login-page">
 
-<div class="login-box">
-    <h3>Ex-HCLites Login</h3>
+    <!-- Header -->
+    <div class="top-bar">
+        <span class="logo">HCLTech</span>
+        <span class="title">Offboarding Portal</span>
+    </div>
 
-    <input type="text" id="uid" placeholder="Login ID">
-    <input type="password" id="pwd" placeholder="Password">
+    <!-- Main Area -->
+    <div class="main-container">
 
-    <button onclick="login()">Login Now</button>
-</div>
+        <!-- Login Box -->
+        <div class="login-box">
 
-<script src="script.js"></script>
+            <div class="login-title">Ex-HCLites Login</div>
+
+            <table class="login-table">
+                <tr>
+                    <td class="label">Login ID</td>
+                    <td><input type="text" id="uid" value="52222978" readonly></td>
+                </tr>
+                <tr>
+                    <td class="label">Password</td>
+                    <td><input type="password" id="pwd" value="Welcome@123"></td>
+                </tr>
+
+                <!-- OTP ROW (hidden initially) -->
+                <tr id="otp-row" style="display:none;">
+                    <td class="label">OTP</td>
+                    <td><input type="password" id="otp" placeholder="Enter OTP"></td>
+                </tr>
+            </table>
+
+            <!-- Buttons -->
+            <div class="btn-row">
+                <button id="loginBtn" onclick="showOtp()">Login Now</button>
+                <button id="verifyBtn" onclick="verifyOtp()" style="display:none;">
+                    Verify OTP
+                </button>
+            </div>
+
+            <div class="forgot">Forgot Password</div>
+        </div>
+
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+        <b>Instructions:-</b>
+        <ul>
+            <li>Please note that you will be able to access this portal only after your last working day (LWD).</li>
+            <li>If your LWD is prior to 01.04.2013 then your details will not be available here.</li>
+            <li>Login ID would be your HCL’s employee code which was used for logging into myhcl.com.</li>
+            <li>If you are unable to trace the auto mailer then click on Forgot Password link to generate a new password.</li>
+            <li>Best viewed on latest versions of MS Edge, Chrome or Safari.</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
