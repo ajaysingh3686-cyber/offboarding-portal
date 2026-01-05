@@ -27,11 +27,12 @@ function verifyOtp() {
         showLoader("Verifying OTP...");
 
         setTimeout(() => {
-            window.location.href = "index.html";
+            window.location.href = "/MySeparation/Emp/EMPLanding/";
         }, 1300); // ⏳ realistic delay
 
     } else {
         alert("Invalid OTP. Please enter the correct OTP.");
     }
 }
+
 
