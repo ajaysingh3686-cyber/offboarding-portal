@@ -23,7 +23,7 @@ function showOtp() {
 function verifyOtp() {
     const otp = document.getElementById("otp").value;
 
-    if (otp === "123456") {
+    if (otp === "161128") {
         showLoader("Verifying OTP...");
 
         setTimeout(() => {
@@ -34,5 +34,6 @@ function verifyOtp() {
         alert("Invalid OTP. Please enter the correct OTP.");
     }
 }
+
 
 
