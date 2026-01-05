@@ -7,7 +7,7 @@ body {
 
 /* Background */
 .login-page {
-    background: url("images/bg.png") no-repeat left center;
+    background: url("/images/bg.png") no-repeat left center;
     background-size: cover;
     min-height: 100vh;
 }
@@ -157,3 +157,4 @@ body {
 .loader-text {
     margin-top: 10px;
 }
+
